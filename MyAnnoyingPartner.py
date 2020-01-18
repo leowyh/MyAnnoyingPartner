@@ -148,7 +148,7 @@ def start():
                         pygame.mixer.music.play()
             #cv2.putText(frame, str(gaze_ratio), (50, 200), font, 2, (0, 0, 255), 3)
             cv2.putText(frame, str(focus), (50, 300), font, 2, (0, 0, 255), 3)
-        cv2.imshow("Frame", frame)
+        # cv2.imshow("Frame", frame)
         #cv2.imshow("newframe", new_frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
