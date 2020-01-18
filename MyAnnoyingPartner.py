@@ -11,6 +11,9 @@ focus = 0
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 
+RIGHT_LOWER_BOUND = 0.9
+LEFT_UPPER_BOUND = 1.6
+
 def midpoint(p1, p2):
     return int((p1.x + p2.x)/2), int((p1.y + p2.y)/2)
 
@@ -113,12 +116,12 @@ while True:
         focus_frame = np.zeros((500, 500, 3), np.uint8)
         focus_frame[:] = (0,0,255)
 
-        if gaze_ratio <= 0.9:
+        if gaze_ratio <= RIGHT_LOWER_BOUND:
             cv2.putText(frame, "RIGHT", (50, 100), font, 2, (0, 0, 255), 3)
             new_frame[:] = (0,0,255)
 
             focus = focus+1
-        elif gaze_ratio > 1.6:
+        elif gaze_ratio > LEFT_UPPER_BOUND:
             new_frame[:] = (255,0,0)
             cv2.putText(frame, "LEFT", (50, 100), font, 2, (0, 0, 255), 3)
             focus = focus+1
