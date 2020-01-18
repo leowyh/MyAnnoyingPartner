@@ -4,14 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8f936d67-1356-47be-b25a-455b8062e716</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>drowsiness detection.py</StartupFile>
+    <StartupFile>MyAnnoyingPartner.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>MyAnnoyingPartner</Name>
     <RootNamespace>MyAnnoyingPartner</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>CondaEnv|CondaEnv|newenv</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,17 +22,11 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="drowsiness detection.py" />
-    <Compile Include="model.py" />
     <Compile Include="MyAnnoyingPartner.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="alarm.wav" />
-    <Content Include="haar cascade files\haarcascade_frontalface_alt.xml" />
-    <Content Include="haar cascade files\haarcascade_lefteye_2splits.xml" />
-    <Content Include="haar cascade files\haarcascade_righteye_2splits.xml" />
-    <Content Include="models\cnnCat2.h5" />
     <Content Include="requirements.txt" />
+    <Content Include="shape_predictor_68_face_landmarks.dat" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
@@ -46,8 +40,7 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="haar cascade files\" />
-    <Folder Include="models\" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|newenv" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
