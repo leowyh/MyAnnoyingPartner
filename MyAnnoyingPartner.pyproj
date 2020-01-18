@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8f936d67-1356-47be-b25a-455b8062e716</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>titlescreen.py</StartupFile>
+    <StartupFile>MyAnnoyingPartner.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,14 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="class1.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="MyAnnoyingPartner.py" />
-    <Compile Include="titlescreen.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="logo.png" />
     <Content Include="requirements.txt" />
     <Content Include="shape_predictor_68_face_landmarks.dat" />
   </ItemGroup>
