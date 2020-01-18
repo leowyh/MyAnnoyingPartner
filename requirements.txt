@@ -1,3 +1,5 @@
 opencv-python
 tensorflow
 keras 
+thorpy
+dlib=19.19
