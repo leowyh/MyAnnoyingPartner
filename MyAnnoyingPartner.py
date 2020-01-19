@@ -115,7 +115,7 @@ def start():
 
             if blinking_ratio > 5:
                 cv2.putText(frame, "BLINKING", (50, 150), font, 3, (255, 0, 0))
-                focus = focus + 1
+                focus = focus + 3
 
             # detect gaze
             gaze_ratio_left_eye = get_gaze_ratio([36, 37, 38, 39, 40 ,41], landmarks)
