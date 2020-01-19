@@ -3,8 +3,8 @@ import pygame.freetype
 from pygame.sprite import Sprite
 from pygame.rect import Rect
 from enum import Enum
-import thorpy
-import eyetracker
+#import thorpy
+#import eyetracker
 import MyAnnoyingPartner
 
 

@@ -4,8 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>8f936d67-1356-47be-b25a-455b8062e716</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>titlescreen.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,8 +22,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="logo1.jpg" />
     <Content Include="requirements.txt" />
     <Content Include="shape_predictor_68_face_landmarks.dat" />
+    <Content Include="wow.wav" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
@@ -39,6 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="CondaEnv|CondaEnv|newenv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyAnnoyingPartner.py" />
+    <Compile Include="titlescreen.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

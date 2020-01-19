@@ -113,8 +113,9 @@ def start():
             else:
                 blinking_ratio = (left_eye_ratio + right_eye_ratio) / 2
 
-            if blinking_ratio > 5.7:
+            if blinking_ratio > 5:
                 cv2.putText(frame, "BLINKING", (50, 150), font, 3, (255, 0, 0))
+                focus = focus + 1
 
             # detect gaze
             gaze_ratio_left_eye = get_gaze_ratio([36, 37, 38, 39, 40 ,41], landmarks)
@@ -137,10 +138,10 @@ def start():
             else:
                 cv2.putText(frame, "CENTER", (50, 100), font, 2, (0, 0, 255), 3)
                 if focus > 0:
-                    focus = focus - 1
+                    focus = focus - 2
                 else:
                     focus = 0              
-            if focus >= 30:
+            if focus >= 40:
                     #cv2.imshow("focusFrame", focus_frame)
                     # pygame.mixer.music.load("media.io_Focus.wav")
                     pygame.mixer.music.load("wow.wav")
