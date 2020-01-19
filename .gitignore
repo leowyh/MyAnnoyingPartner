@@ -340,3 +340,4 @@ ASALocalRun/
 healthchecksd
 
 env/*
+/dlib-19.19.0
